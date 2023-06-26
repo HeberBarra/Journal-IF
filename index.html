@@ -21,10 +21,14 @@
     </header>
     <div class="bodyWrapper">
         <main>
-            <select name="tipoNoticia">
-                <option value="tech">tecnologia</option>
-                <option value="ifpr">relacionado ao IFPR</option>
-            </select>
+            <label>
+                Tipo da Notícia:
+                <select name="tipoNoticia">
+                    <option value="todas" selected>Todas</option>
+                    <option value="tech">tecnologia</option>
+                    <option value="ifpr">relacionado ao IFPR</option>
+                </select>
+            </label>
             <article class="tech">
                 <h1>
                     "Microsoft lançou um novo Linux?"
@@ -49,7 +53,7 @@
                 </a>
                 <p>"corpo da notícia"</p>
             </article>
-            <article>
+            <article class="tech">
                 <h1>
                     "programa-hackers-do-bem-vai-fortalecer-a-ciberseguranca-no-pais"
                 </h1>
@@ -61,7 +65,7 @@
                 </a>
                 <p></p>
             </article>
-            <article>
+            <article class="ifpr">
                 <h1>
                     "Projetos De extensão e pesquisa do IFPR"
                 </h1>
@@ -72,8 +76,7 @@
                 </a>
                 <p></p>
             </article>
-
-            <article>
+            <article class="ifpr">
                 <h1>
                     "laboratorio-de-telecomunicacoes-do-ifpr-campus-curitiba-recebe-doacao-de-equipamentos-da-trane-technologies"
                 </h1>
@@ -85,8 +88,7 @@
                 </a>
                 <p></p>
             </article>
-
-            <article>
+            <article class="ifpr">
                 <h1>
                     "estudantes-do-curso-de-eventos-promovem-festa-julina-no-ifpr-campus-curitiba"
                 </h1>
@@ -97,9 +99,8 @@
                     </button>
                 </a>
                 <p></p>
-
             </article>
-            <article>
+            <article class="ifpr">
                 <h1>
                     "servidores-do-ifpr-participam-de-curso-de-multiplicadores-em-eficiencia-energetica-em-edificacoes"
                 </h1>
@@ -110,9 +111,9 @@
                     </button>
                 </a>
                 <p></p>
-                
+
             </article>
-            <article>
+            <article class="ifpr">
                 <h1>
                     "equipes-de-volei-do-ifpr-campus-curitiba-se-destacam-nos-jogos-escolares-de-curitiba-2023"
                 </h1>
@@ -123,13 +124,8 @@
                     </button>
                 </a>
                 <p></p>
-                
+
             </article>
-
-
-
-
-
         </main>
         <aside>
             <article class="info">
