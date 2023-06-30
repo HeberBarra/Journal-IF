@@ -8,6 +8,7 @@
     <meta name="theme-color" content="dark light" />
     <link rel="stylesheet" href="css/index.css">
     <title>Journal IF</title>
+    <script src="javascript/script.js" defer></script>
     <script src="javascript/index.js" defer></script>
 </head>
 
@@ -18,7 +19,10 @@
         <a href="https://ifpr.edu.br">
             <h1>Journal IF</h1>
         </a>
-        <button id="follow">parar de seguir</button>
+        <div id="headerButtons">
+            <button>parar de seguir</button>
+            <button id="theme">trocar tema</button>
+        </div>
     </header>
     <div class="bodyWrapper">
         <main>
@@ -32,7 +36,7 @@
             </label>
             <article class="tech">
                 <h1>
-                    "Microsoft lançou um novo Linux?"
+                    "Microsoft lançou um Novo Linux?"
                 </h1>
                 <a target="_blank"
                     href="https://www.terra.com.br/byte/distribuicao-linux-da-microsoft-e-lancada-oficialmente,1a97c0a0764b9f9a075af36287e57c9bqi9asqfa.html">
@@ -41,10 +45,11 @@
                     </button>
                 </a>
                 <p>Conhecido como Azure Linux, esse é o mais novo sistema Linux da Microsoft</p>
+                <button>ver resumo completo</button>
             </article>
             <article class="tech">
                 <h1>
-                    "Ataques ataques-ciberneticos-crescem-31-no-primeiro-trimestre-de-2023"
+                    "Ataques Cibernéticos Crescem 31% no Primeiro Trimestre de 2023"
                 </h1>
                 <a target="_blank"
                     href="https://www.securityreport.com.br/ataques-ciberneticos-crescem-31-no-primeiro-trimestre-de-2023/">
@@ -53,10 +58,11 @@
                     </button>
                 </a>
                 <p>"corpo da notícia"</p>
+                <button>ver resumo completo</button>
             </article>
             <article class="tech">
                 <h1>
-                    "programa-hackers-do-bem-vai-fortalecer-a-ciberseguranca-no-pais"
+                    "Programa Hackers do Bem vai Fortalecer a Ciberseguranca no Pais"
                 </h1>
                 <a target="_blank"
                     href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2023/05/programa-hackers-do-bem-vai-fortalecer-a-ciberseguranca-no-pais">
@@ -65,10 +71,11 @@
                     </button>
                 </a>
                 <p></p>
+                <button>ver resumo completo</button>
             </article>
             <article class="ifpr">
                 <h1>
-                    "Projetos De extensão e pesquisa do IFPR"
+                    "Projetos de Extensão e Pesquisa do IFPR"
                 </h1>
                 <a target="_blank" href="https://cope.ifpr.edu.br/transparenciaprojetoscampus.php">
                     <button>
@@ -76,10 +83,11 @@
                     </button>
                 </a>
                 <p></p>
+                <button>ver resumo completo</button>
             </article>
             <article class="ifpr">
                 <h1>
-                    "laboratorio-de-telecomunicacoes-do-ifpr-campus-curitiba-recebe-doacao-de-equipamentos-da-trane-technologies"
+                    "Laboratório de Telecomunicacoes do IFPR Campus Curitiba Recebe Doação de Equipamentos da Trane Technologies"
                 </h1>
                 <a target="_blank"
                     href="https://ifpr.edu.br/curitiba/laboratorio-de-telecomunicacoes-do-ifpr-campus-curitiba-recebe-doacao-de-equipamentos-da-trane-technologies/">
@@ -88,10 +96,11 @@
                     </button>
                 </a>
                 <p></p>
+                <button>ver resumo completo</button>
             </article>
             <article class="ifpr">
                 <h1>
-                    "estudantes-do-curso-de-eventos-promovem-festa-julina-no-ifpr-campus-curitiba"
+                    "Estudantes Do Curso de Eventos Promovem Festa Julina no IFPR Campus Curitiba"
                 </h1>
                 <a target="_blank"
                     href="https://ifpr.edu.br/curitiba/estudantes-do-curso-de-eventos-promovem-festa-julina-no-ifpr-campus-curitiba/">
@@ -100,10 +109,11 @@
                     </button>
                 </a>
                 <p></p>
+                <button>ver resumo completo</button>
             </article>
             <article class="ifpr">
                 <h1>
-                    "servidores-do-ifpr-participam-de-curso-de-multiplicadores-em-eficiencia-energetica-em-edificacoes"
+                    "Servidores do IFPR Participam de Curso de Multiplicadores em EficiÊncia Energética em Edificações"
                 </h1>
                 <a target="_blank"
                     href="https://ifpr.edu.br/curitiba/servidores-do-ifpr-participam-de-curso-de-multiplicadores-em-eficiencia-energetica-em-edificacoes/">
@@ -112,11 +122,11 @@
                     </button>
                 </a>
                 <p></p>
-
+                <button>ver resumo completo</button>
             </article>
             <article class="ifpr">
                 <h1>
-                    "equipes-de-volei-do-ifpr-campus-curitiba-se-destacam-nos-jogos-escolares-de-curitiba-2023"
+                    "Equipes de Vôlei do IFPR Campus Curitiba se Destacam nos Jogos Escolares de Curitiba 2023"
                 </h1>
                 <a target="_blank"
                     href="https://ifpr.edu.br/curitiba/equipes-de-volei-do-ifpr-campus-curitiba-se-destacam-nos-jogos-escolares-de-curitiba-2023/">
@@ -125,13 +135,13 @@
                     </button>
                 </a>
                 <p></p>
-
+                <button>ver resumo completo</button>
             </article>
         </main>
         <aside>
             <article class="info">
-                <h4>Informações:</h4>
-                <p>Jornal fíctio prospoto como atividade avaliativa pelo professor Jackson para o primerio ano do curso
+                <h1>Informações:</h1>
+                <p>Jornal fíctio proposto como atividade avaliativa pelo professor Jackson Schirigatti para o primerio ano do curso
                     de
                     Informática 1.</p>
             </article>
