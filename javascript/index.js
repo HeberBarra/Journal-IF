@@ -4,13 +4,13 @@ const header = document.querySelector("header");
 const filtroNoticias = document.querySelector("select");
 const noticias = document.querySelectorAll("article:not(.info)");
 followButton?.addEventListener("click", () => {
-    if (header.style.position == "sticky") {
-        header.style.position = "absolute";
-        followButton.innerHTML = "voltar a seguir";
+    if (header.style.position == "relative") {
+        header.style.position = "sticky";
+        followButton.innerHTML = "parar de seguir";
         return;
     }
-    header.style.position = "sticky";
-    followButton.innerHTML = "parar de seguir";
+    header.style.position = "relative";
+    followButton.innerHTML = "voltar a seguir";
 });
 filtroNoticias?.addEventListener("change", () => {
     for (let i = 0; i < noticias.length; i++) {
