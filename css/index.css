@@ -1,103 +1,118 @@
 :root {
-    --background-color: #ffffff;
-    --border-color: #2f9e41;
+  --backgroundColor: #ffffff;
+  --borderColor: #2f9e41;
+  --fontColor: #000000;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
 }
 
 header {
-    grid-column: 1 / 2;
-    display: grid;
-    grid-template-columns: 20% 75% 5%;
-    border-bottom: solid var(--border-color);
-    padding: .5em;
-    position: sticky;
-    top: 0;
-    background-color: var(--background-color);
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  border-bottom: solid var(--borderColor);
+  padding: 0.5em;
+  position: sticky;
+  top: 0;
+  background-color: var(--backgroundColor);
 }
-
 header img#logo {
-    width: 50%;
-    grid-column: 1;
+  width: 100%;
+  grid-column: 1;
 }
-
 header a {
-    font-size: 5em;
-    width: 100%;
-    padding-right: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
+  font-size: 3em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--fontColor);
 }
-
-header button {
-    height: 20%;
-    padding: .1em;
+header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 3;
+  height: 100%;
+  width: 100%;
+  padding: 0.1em;
+}
+header div button {
+  width: 95%;
 }
 
 div.bodyWrapper {
-    display: grid;
-    grid-template-columns: 80% 20%;
+  display: grid;
+  grid-template-columns: 80% 20%;
 }
 
 aside {
-    grid-column: 2;
-    grid-row: 2;
-    border-left: solid var(--border-color);
-    padding: 0.5em;
+  grid-column: 2;
+  grid-row: 2;
+  border-left: solid var(--borderColor);
+  background-color: var(--backgroundColor);
+  padding: 0.5em;
 }
 
-
 main {
-    padding: 2%;
-    grid-column: 1;
-    grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5em;
+  padding: 2%;
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
 }
 
 label {
-    border: solid var(--border-color);
-    padding: .3em;
+  border: solid var(--borderColor);
+  padding: 0.3em;
 }
-
 label select {
-    margin-top: .3em;
-    width: 100%;
+  margin-top: 0.3em;
+  width: 100%;
 }
 
+article {
+  color: var(--fontColor);
+}
 article:not(.info) {
-    border: solid var(--border-color);
-    width: 90%;
+  border: solid var(--borderColor);
+  width: 90%;
+  padding: 1%;
 }
-
 article button {
-    margin-left: 1%;
+  margin-left: 1%;
 }
-
 article h1 {
-    text-decoration: underline;
-    padding: 1%;
-
+  text-decoration: underline;
 }
-
 article p {
-    text-indent: 3%;
-    text-align: justify;
-    padding-bottom: 1%;
+  text-indent: 3%;
+  text-align: justify;
 }
 
 footer {
-    border-top: solid var(--border-color);
-    width: 100%;
-    padding: 1%;
+  border-top: solid var(--borderColor);
+  width: 100%;
+  padding: 1%;
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
 }
