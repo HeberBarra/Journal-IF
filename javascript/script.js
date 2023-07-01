@@ -2,7 +2,7 @@
 const rootElement = document.querySelector(":root");
 const themeButton = document.querySelector("#theme");
 const logoIF = document.querySelector("#logo");
-let theme = matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark";
+window.localStorage.setItem("theme", matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark");
 const cssVariables = [
     {
         "varName": "--backgroundColor",
@@ -15,12 +15,12 @@ const cssVariables = [
 ];
 const changeTheme = () => {
     let colorIndex;
-    if (theme == "light") {
-        theme = "dark";
+    if (window.localStorage.getItem("theme") == "light") {
+        window.localStorage.setItem("theme", "dark");
         colorIndex = 0;
     }
     else {
-        theme = "light";
+        window.localStorage.setItem("theme", "light");
         colorIndex = 1;
     }
     changeLogo();
@@ -33,7 +33,7 @@ const changeLogo = () => {
         return;
     }
     const logoImages = ["imagens/logoIF.png", "imagens/logoIFDarkMode.png"];
-    if (theme == "light") {
+    if (window.localStorage.getItem("theme") == "light") {
         logoIF.src = logoImages[1];
         return;
     }

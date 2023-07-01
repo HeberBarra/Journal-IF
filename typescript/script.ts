@@ -1,7 +1,7 @@
 const rootElement: HTMLElement | null = document.querySelector(":root")
 const themeButton: HTMLButtonElement | null = document.querySelector("#theme")
 const logoIF: HTMLImageElement | null = document.querySelector("#logo")
-let theme: "dark" | "light" = matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark"
+window.localStorage.setItem("theme", matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark")
 
 const cssVariables = [
     // light | dark
@@ -18,11 +18,11 @@ const cssVariables = [
 const changeTheme = () => {
     let colorIndex: 0 | 1
     
-    if (theme == "light") {
-        theme = "dark"
+    if (window.localStorage.getItem("theme") == "light") {
+        window.localStorage.setItem("theme", "dark")
         colorIndex = 0
     } else {
-        theme = "light"
+        window.localStorage.setItem("theme", "light")
         colorIndex = 1
     }
 
@@ -38,7 +38,7 @@ const changeLogo = () => {
 
     const logoImages: string[] = ["imagens/logoIF.png", "imagens/logoIFDarkMode.png"]
 
-    if (theme == "light") {
+    if (window.localStorage.getItem("theme") == "light") {
         logoIF.src = logoImages[1]
         return
     }
