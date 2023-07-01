@@ -1,7 +1,8 @@
 "use strict";
 const rootElement = document.querySelector(":root");
 const themeButton = document.querySelector("#theme");
-let theme = "dark";
+const logoIF = document.querySelector("#logo");
+let theme = matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark";
 const cssVariables = [
     {
         "varName": "--backgroundColor",
@@ -22,8 +23,21 @@ const changeTheme = () => {
         theme = "light";
         colorIndex = 1;
     }
+    changeLogo();
     cssVariables.forEach((cssVariable) => {
         rootElement?.style.setProperty(cssVariable.varName, cssVariable.colors[colorIndex]);
     });
 };
+const changeLogo = () => {
+    if (!logoIF) {
+        return;
+    }
+    const logoImages = ["imagens/logoIF.png", "imagens/logoIFDarkMode.png"];
+    if (theme == "light") {
+        logoIF.src = logoImages[1];
+        return;
+    }
+    logoIF.src = logoImages[0];
+};
 themeButton?.addEventListener("click", changeTheme);
+changeLogo();

@@ -4,6 +4,12 @@
   --fontColor: #000000;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #070707;
+    --fontColor: #ffffff;
+  }
+}
 * {
   margin: 0;
   padding: 0;
