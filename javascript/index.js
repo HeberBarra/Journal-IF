@@ -25,3 +25,24 @@ filtroNoticias?.addEventListener("change", () => {
         noticias[i].style.display = "none";
     }
 });
+const corrigirTitulo = (titulo) => {
+    const caractersInvalidos = ["\"", "?", "ç", "é", "ã", "ó", "õ", "í", "ö", "ú", "\'", " ", "ê", "â"];
+    titulo = titulo.trim().toLowerCase();
+    caractersInvalidos.forEach(caracter => { titulo = titulo.replaceAll(caracter, ""); });
+    return titulo;
+};
+noticias?.forEach((noticia) => {
+    noticia.children[noticia.children.length - 1].addEventListener("click", () => {
+        let infoNoticia = [];
+        for (let i = 0; i < noticia.children.length; i++) {
+            let ntcChildren = noticia.children[i];
+            if (ntcChildren.innerHTML.includes("<button>") || ntcChildren.tagName == "BUTTON") {
+                continue;
+            }
+            infoNoticia.push([ntcChildren.tagName, ntcChildren.innerHTML]);
+        }
+        let tituloNoticia = corrigirTitulo(infoNoticia[0][1]);
+        window.localStorage.setItem(tituloNoticia, infoNoticia.toString());
+        window.location.href = `noticia.html?noticia=${tituloNoticia}`;
+    });
+});
