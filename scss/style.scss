@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
 :root {
     --backgroundColor: #ffffff;
     --borderColor: #2f9e41;
@@ -16,6 +18,7 @@
     padding: 0;
     font-weight: normal;
     box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
 body {
@@ -111,6 +114,13 @@ article {
         border: solid var(--borderColor);
         width: 90%;
         padding: 1%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 40%;
+        align-self: center;
     }
 
     button {
