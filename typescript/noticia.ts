@@ -10,23 +10,32 @@ let infoNoticia = window.localStorage.getItem(tituloNoticia)?.split(',')
 
 if (infoNoticia != undefined) {
     let lastElementCreated: HTMLElement | null = null
+    let textElement
     let textInfo = ""
 
     for (let i = 0; i < infoNoticia.length; i++) {
         if (htmlElementNames.includes(infoNoticia[i])) {
             lastElementCreated = document.createElement(infoNoticia[i])
             localNoticia?.appendChild(lastElementCreated)
+            textElement = undefined
 
             continue
+        }
+
+        if (textElement != undefined) {
+            textInfo += ", "
         }
 
         textInfo += infoNoticia[i]
         console.log(textInfo)
 
         if (textInfo != "") {
-            let textElement = document.createTextNode(textInfo)
+            textElement = document.createTextNode(textInfo)
             textInfo = ""
             lastElementCreated?.appendChild(textElement)
         }
     }
+} else {
+    window.alert("Notícia não existe ou não foi acessada pelo site principal")
+    window.location.href = "index.html" 
 }
